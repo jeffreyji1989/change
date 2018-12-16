@@ -3,8 +3,10 @@ package com.jeffrey.change.web.controller;
 import com.jeffrey.change.web.annotation.DecryptField;
 import com.jeffrey.change.web.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -24,7 +26,7 @@ public class AdviceController {
 
     @PostMapping("/getUserVo")
     @DecryptField(includes = {"userName", "passWord"})
-    public UserVo getUserVo(@RequestBody UserVo userVo) {
+    public UserVo getUserVo(@Valid @RequestBody UserVo userVo) {
         userVo.setId(ThreadLocalRandom.current().nextLong());
 //        int temp = 10 / 0;
         return userVo;
