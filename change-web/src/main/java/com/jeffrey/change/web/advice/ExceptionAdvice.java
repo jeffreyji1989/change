@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
  * @version:1.0.0
  * @description:统一异常拦截
  */
-@RestControllerAdvice(basePackages = "com.jeffrey.change.web.controller")
 @Slf4j
+@RestControllerAdvice(basePackages = "com.jeffrey.change.web.controller")
 public class ExceptionAdvice {
 
     @ExceptionHandler(value = Exception.class)

@@ -40,8 +40,6 @@ public class DecryptResponseBodyAdvice implements ResponseBodyAdvice {
 
     @Override
     public boolean supports(MethodParameter methodParameter, Class aClass) {
-        log.info("-----------------1----------------");
-        log.info("aclass:{}",aClass.getName());
         return true;
     }
 

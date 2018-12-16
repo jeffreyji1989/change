@@ -26,7 +26,7 @@ public class AdviceController {
     @DecryptField(includes = {"userName", "passWord"})
     public UserVo getUserVo(@RequestBody UserVo userVo) {
         userVo.setId(ThreadLocalRandom.current().nextLong());
-        int temp = 10 / 0;
+//        int temp = 10 / 0;
         return userVo;
     }
 
